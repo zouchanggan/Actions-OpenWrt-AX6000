@@ -269,9 +269,9 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: | 
-        cd openwrt/bin/targets/*/*
-        rm -rf packages
-        cp openwrt/.config ./firmware/${{ env.date1 }}_${{ env.OPENWRT_NAME }}_x86-64.config
+        mkdir firmware && find openwrt/bin/targets/*/*/ -maxdepth 1 \
+        | xargs -i mv -f {} ./firmware/
+        cp openwrt/.config ./firmware/${{ env.FILE_DATE }}_${{ env.OPENWRT_NAME }}_x86-64.config
         cd firmware
         sudo -E apt-get -qq install rename
         rename 's/.*${{ env.DEVICE_NAME }}/${{ env.FILE_DATE }}-${{ env.OPENWRT_NAME }}-${{ env.DEVICE_NAME }}${{ env.SWITCH }}${{ env.WIFI_INTERFACE }}${{ env.BUILD_DOCKERMAN }}/' *
