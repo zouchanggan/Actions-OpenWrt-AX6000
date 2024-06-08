@@ -271,7 +271,7 @@ jobs:
       run: | 
         cd openwrt/bin/targets/*/*
         rm -rf packages
-        cp openwrt/.config ${{ env.FILE_DATE }}_${{ env.OPENWRT_NAME }}_x86-64.config
+        cp openwrt/.config openwrt/bin/targets/*/*/${{ env.FILE_DATE }}_${{ env.OPENWRT_NAME }}_x86-64.config
         sudo -E apt-get -qq install rename
         rename 's/.*${{ env.DEVICE_NAME }}/${{ env.FILE_DATE }}-${{ env.OPENWRT_NAME }}-${{ env.DEVICE_NAME }}${{ env.SWITCH }}${{ env.WIFI_INTERFACE }}${{ env.BUILD_DOCKERMAN }}/' *
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
