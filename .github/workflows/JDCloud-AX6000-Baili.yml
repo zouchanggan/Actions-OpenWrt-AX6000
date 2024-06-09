@@ -270,8 +270,7 @@ jobs:
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: | 
         mkdir firmware && find openwrt/bin/targets/*/*/ -maxdepth 1 \
-        -name "*squashfs-sysupgrade.bin" \
-        -or -name "*.*" \
+        -name "*.*" \
         | xargs -i mv -f {} ./firmware/
         cp openwrt/.config ./firmware/${{ env.FILE_DATE }}-${{ env.OPENWRT_NAME }}-${{ env.DEVICE_NAME }}.config
         cd firmware
