@@ -273,7 +273,7 @@ jobs:
         -name "*initramfs-kernel.bin" \
         -or -name "squashfs-sysupgrade.bin" \
         | xargs -i mv -f {} ./firmware/
-        cp openwrt/.config ./firmware/${{ env.date1 }}_${{ env.OPENWRT_NAME }}.config
+        cp openwrt/.config ./firmware/${{ env.FILE_DATE }}_${{ env.OPENWRT_NAME }}.config
         cd firmware
         sudo -E apt-get -qq install rename
         rename 's/.*${{ env.DEVICE_NAME }}/${{ env.FILE_DATE }}-${{ env.OPENWRT_NAME }}-${{ env.DEVICE_NAME }}${{ env.SWITCH }}${{ env.WIFI_INTERFACE }}${{ env.BUILD_DOCKERMAN }}/' *.bin
