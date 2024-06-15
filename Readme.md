@@ -1,5 +1,8 @@
 # 借助 GitHub Actions 的 OpenWrt 在线自动编译.
 
+### 固件发布:
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/moruiris/Actions-OpenWrt?style=for-the-badge&label=固件下载)](https://github.com/zouchanggan/Actions-OpenWrt-AX6000/releases/latest)
+
 #### hanwckf大佬mt798x闭源仓库- [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x).
 
 #### 237大佬mt798x闭源仓库- [padavanonly/immortalwrt-mt798x](https://github.com/padavanonly/immortalwrt-mt798x).
