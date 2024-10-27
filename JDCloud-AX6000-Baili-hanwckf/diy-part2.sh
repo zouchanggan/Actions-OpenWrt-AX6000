@@ -54,15 +54,12 @@ git clone https://github.com/zouchanggan/SSRP.git package/SSRP
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 删除软件包
-# rm -rf package/passwall-packages/shadowsocksr-libev
 rm -rf package/passwall-packages/shadowsocks-rust
 rm -rf package/passwall-packages/v2ray-geodata
 rm -rf package/passwall-packages/chinadns-ng
 rm -rf package/passwall-packages/gn
 
 # 替换软件&依赖
-# cp -r package/SSRP/update/shadowsocksr-libev package/passwall-packages
-# cp -r package/SSRP/update/shadowsocks-rust package/passwall-packages
 cp -r package/SSRP/update/v2raya package/passwall-packages
 cp -r package/SSRP/themes/luci-theme-design feeds/luci/themes
 cp -r package/small/shadowsocks-rust package/passwall-packages
@@ -79,11 +76,13 @@ cp -r package/small/redsocks2 package/passwall-packages
 cp -r package/small/shadow-tls package/passwall-packages
 cp -r package/small/luci-app-openclash package/passwall-packages
 cp -r package/small/gn package/passwall-packages
+cp -r package/small/gn feeds/packages/net
 
 # 删除软件包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-ssr-plus
 rm -rf feeds/luci/applications/luci-app-vssr
+rm -rf feeds/luci/applications/luci-app-ddns-go
 rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf package/SSRP
