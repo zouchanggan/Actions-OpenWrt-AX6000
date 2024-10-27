@@ -35,12 +35,7 @@ rm -rf feeds/packages/net/gn
 rm -rf feeds/packages/lang/golang
 rm -rf package/libs/mbedtls
 rm -rf feeds/packages/net/ddns-go
-rm -rf package/passwall-packages
-rm -rf package/OpenAppFilter
-rm -rf package/lucky
-rm -rf package/luci-app-ddns-go
-rm -rf package/mosdns
- 
+
 #添加额外软件包
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 git clone https://github.com/zouchanggan/mbedtls.git package/libs/mbedtls
