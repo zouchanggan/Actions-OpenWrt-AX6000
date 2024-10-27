@@ -55,9 +55,13 @@ git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 # 删除软件包
 # rm -rf package/passwall-packages/shadowsocksr-libev
 rm -rf package/passwall-packages/shadowsocks-rust
+rm -rf package/helloworld/shadowsocks-rust
+rm -rf package/helloworld/v2raya
 
 # 替换软件&依赖
 cp -r package/small/shadowsocks-rust package/passwall-packages
+cp -r package/small/shadowsocks-rust package/helloworld
+cp -r package/SSRP/update/v2raya package/helloworld
 cp -r package/passwall/luci-app-passwall package/passwall-packages
 cp -r package/passwall2/luci-app-passwall2 package/passwall-packages
 cp -r package/small/luci-app-mosdns package/passwall-packages
