@@ -43,39 +43,18 @@ rm -rf package/mosdns
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 git clone https://github.com/zouchanggan/mbedtls.git package/libs/mbedtls
 git clone --depth=1 https://github.com/kenzok8/small.git package/small
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/zouchanggan/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/zouchanggan/SSRP.git package/SSRP
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
-git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
+
 # 删除软件包
-# rm -rf package/passwall-packages/shadowsocksr-libev
-rm -rf package/passwall-packages/shadowsocks-rust
-rm -rf package/passwall-packages/v2ray-geodata
-rm -rf package/passwall-packages/chinadns-ng
-rm -rf package/passwall-packages/xray-core
+rm -rf package/small/shadowsocksr-libev
+rm -rf package/small/xray-core
 # 替换软件&依赖
-# cp -r package/SSRP/update/shadowsocksr-libev package/passwall-packages
-# cp -r package/SSRP/update/shadowsocks-rust package/passwall-packages
-cp -r package/SSRP/update/v2raya package/passwall-packages
+cp -r package/SSRP/update/shadowsocksr-libev package/small
 cp -r package/SSRP/themes/luci-theme-design feeds/luci/themes
-cp -r package/small/shadowsocks-rust package/passwall-packages
-cp -r package/helloworld/luci-app-ssr-plus package/passwall-packages
-cp -r package/passwall/luci-app-passwall package/passwall-packages
-cp -r package/passwall2/luci-app-passwall2 package/passwall-packages
-cp -r package/small/luci-app-mosdns package/passwall-packages
-cp -r package/small/mosdns package/passwall-packages
-cp -r package/small/v2ray-geodata package/passwall-packages
-cp -r package/small/chinadns-ng package/passwall-packages
-cp -r package/small/v2dat package/passwall-packages
-cp -r package/small/lua-neturl package/passwall-packages
-cp -r package/small/redsocks2 package/passwall-packages
-cp -r package/small/shadow-tls package/passwall-packages
-cp -r package/small/luci-app-openclash package/passwall-packages
-cp -r package/helloworld/xray-core package/passwall-packages
+cp -r package/helloworld/xray-core package/small
 # 删除软件包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-ssr-plus
@@ -84,12 +63,7 @@ rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/luci/applications/luci-app-ddns-go
 rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf package/SSRP
-rm -rf package/small
-rm -rf package/passwall
-rm -rf package/passwall2
 rm -rf package/helloworld
-# rm -rf package/istore/quickstart
-# rm -rf package/istore/luci-app-quickstart
 ##-----------------Add OpenClash dev core------------------
 curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
