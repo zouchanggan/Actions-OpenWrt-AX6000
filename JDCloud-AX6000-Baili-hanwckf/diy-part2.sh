@@ -35,7 +35,6 @@ rm -rf feeds/packages/net/gn
 rm -rf feeds/packages/lang/golang
 rm -rf package/libs/mbedtls
 rm -rf feeds/packages/net/ddns-go
-rm -rf feeds/luci/themes
 
 #添加额外软件包
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
@@ -57,7 +56,7 @@ rm -rf package/passwall-packages/gn
 
 # 替换软件&依赖
 cp -r package/SSRP/update/v2raya package/passwall-packages
-cp -r package/SSRP/themes feeds/luci
+cp -r package/SSRP/themes/luci-theme-design feeds/luci/themes
 cp -r package/small/shadowsocks-rust package/passwall-packages
 cp -r package/helloworld/luci-app-ssr-plus package/passwall-packages
 cp -r package/passwall/luci-app-passwall package/passwall-packages
