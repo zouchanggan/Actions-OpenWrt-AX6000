@@ -62,6 +62,7 @@ rm -rf package/helloworld/chinadns-ng
 rm -rf package/helloworld/mosdns
 rm -rf package/helloworld/gn
 rm -rf package/passwall-packages/gn
+cp -r package/small/gn feeds/packages/net
 
 # 替换软件&依赖
 cp -r package/small/shadowsocks-rust package/passwall-packages
