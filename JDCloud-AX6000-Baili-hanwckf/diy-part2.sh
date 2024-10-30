@@ -31,7 +31,7 @@ rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/xray-plugin
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/open-app-filter
-rm -rf feeds/packages/net/gn
+# rm -rf feeds/packages/net/gn
 rm -rf feeds/packages/lang/golang
 rm -rf package/libs/mbedtls
 rm -rf feeds/packages/net/ddns-go
@@ -72,7 +72,7 @@ cp -r package/small/redsocks2 package/passwall-packages
 cp -r package/small/shadow-tls package/passwall-packages
 cp -r package/small/luci-app-openclash package/passwall-packages
 cp -r package/helloworld/gn package/passwall-packages
-cp -r package/helloworld/gn feeds/packages/net
+# cp -r package/helloworld/gn feeds/packages/net
 cp -r package/helloworld/xray-core package/passwall-packages
 
 # 删除软件包
