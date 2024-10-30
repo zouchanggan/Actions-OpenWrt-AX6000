@@ -71,8 +71,8 @@ cp -r package/small/lua-neturl package/passwall-packages
 cp -r package/small/redsocks2 package/passwall-packages
 cp -r package/small/shadow-tls package/passwall-packages
 cp -r package/small/luci-app-openclash package/passwall-packages
-cp -r package/small/gn package/passwall-packages
-cp -r package/small/gn feeds/packages/net
+cp -r package/helloworld/gn package/passwall-packages
+cp -r package/helloworld/gn feeds/packages/net
 cp -r package/helloworld/xray-core package/passwall-packages
 
 # 删除软件包
