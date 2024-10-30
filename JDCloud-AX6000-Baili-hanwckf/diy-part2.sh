@@ -49,13 +49,30 @@ git clone https://github.com/zouchanggan/SSRP.git package/SSRP
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 删除软件包
-rm -rf package/small/v2raya
-rm -rf package/small/xray-core
+rm -rf package/passwall-packages/shadowsocks-rust
+rm -rf package/passwall-packages/v2ray-geodata
+rm -rf package/passwall-packages/chinadns-ng
+rm -rf package/passwall-packages/gn
+rm -rf package/passwall-packages/xray-core
 
 # 替换软件&依赖
-cp -r package/SSRP/update/v2raya package/small
-cp -r package/helloworld/xray-core package/small
+cp -r package/SSRP/update/v2raya package/passwall-packages
 cp -r package/SSRP/themes/luci-theme-design feeds/luci/themes
+cp -r package/small/shadowsocks-rust package/passwall-packages
+cp -r package/helloworld/luci-app-ssr-plus package/passwall-packages
+cp -r package/passwall/luci-app-passwall package/passwall-packages
+cp -r package/passwall2/luci-app-passwall2 package/passwall-packages
+cp -r package/small/luci-app-mosdns package/passwall-packages
+cp -r package/small/mosdns package/passwall-packages
+cp -r package/small/v2ray-geodata package/passwall-packages
+cp -r package/small/chinadns-ng package/passwall-packages
+cp -r package/small/v2dat package/passwall-packages
+cp -r package/small/lua-neturl package/passwall-packages
+cp -r package/small/redsocks2 package/passwall-packages
+cp -r package/small/shadow-tls package/passwall-packages
+cp -r package/small/luci-app-openclash package/passwall-packages
+cp -r package/small/gn package/passwall-packages
+cp -r package/helloworld/xray-core package/passwall-packages
 
 # 删除软件包
 rm -rf feeds/luci/applications/luci-app-passwall
@@ -65,10 +82,12 @@ rm -rf feeds/luci/applications/luci-app-ddns-go
 rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf package/SSRP
-rm -rf package/passwall-packages
+rm -rf package/small
 rm -rf package/passwall
 rm -rf package/passwall2
 rm -rf package/helloworld
+# 添加 kmod-nf-tproxy 依赖
+sed -i 's/DEPENDS\+=+kmod-ipt-conntrack +IPV6:kmod-nf-conntrack6/DEPENDS\+=+kmod-nf-tproxy +kmod-nf-conntrack +IPV6:kmod-nf-conntrack6/' package/kernel/linux/modules/netfilter.mk
 ##-----------------Add OpenClash dev core------------------
 curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
