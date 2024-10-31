@@ -54,7 +54,7 @@ rm -rf package/passwall-packages/shadowsocks-rust
 rm -rf package/passwall-packages/v2ray-geodata
 rm -rf package/passwall-packages/chinadns-ng
 # rm -rf package/passwall-packages/gn
-rm -rf package/passwall-packages/xray-core
+# rm -rf package/passwall-packages/xray-core
 
 # 替换软件&依赖
 cp -r package/SSRP/update/v2raya package/passwall-packages
@@ -74,7 +74,7 @@ cp -r package/small/shadow-tls package/passwall-packages
 cp -r package/small/luci-app-openclash package/passwall-packages
 # cp -r package/small/gn package/passwall-packages
 cp -r package/passwall-packages/gn feeds/packages/net
-cp -r package/helloworld/xray-core package/passwall-packages
+# cp -r package/helloworld/xray-core package/passwall-packages
 
 # 删除软件包
 rm -rf feeds/luci/applications/luci-app-passwall
