@@ -55,7 +55,7 @@ rm -rf package/passwall-packages/v2ray-geodata
 rm -rf package/passwall-packages/chinadns-ng
 rm -rf package/passwall-packages/gn
 # rm -rf package/passwall-packages/xray-core
-rm -rf package/package/mtk/applications/luci-app-eqos-mtk
+# rm -rf package/package/mtk/applications/luci-app-eqos-mtk
 
 # 替换软件&依赖
 cp -r package/SSRP/update/v2raya package/passwall-packages
@@ -76,7 +76,7 @@ cp -r package/small/luci-app-openclash package/passwall-packages
 cp -r package/small/gn package/passwall-packages
 cp -r package/small/gn feeds/packages/net
 # cp -r package/helloworld/xray-core package/passwall-packages
-cp -r package/SSRP/luci-app-eqos-mtk package/package/mtk/applications/
+# cp -r package/SSRP/luci-app-eqos-mtk package/package/mtk/applications/
 
 # 删除软件包
 rm -rf feeds/luci/applications/luci-app-passwall
